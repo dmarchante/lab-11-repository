@@ -10,27 +10,21 @@ class Counter extends React.Component {
     }
   }
 
-  handleClicks = e => {
-    let clicks = this.state.clicks + 1;
-
-    this.setState({ clicks })
+  handleClicks = () => {
+    this.setState((prevState) => ({clicks: prevState.clicks + 1}))
   }
 
   handleNumberIncrement = e => {
     e.preventDefault();
 
-    let counter = this.state.counter + 1;
-
-    this.setState({ counter });
+    this.setState((prevState) => ({ counter: prevState.counter + 1}));
     this.handleClicks();
   }
 
   handleNumberDecrement = e => {
     e.preventDefault();
 
-    let counter = this.state.counter - 1;
-
-    this.setState({ counter });
+    this.setState((prevState) => ({ counter: prevState.counter + 1}));
     this.handleClicks();
   }
 
