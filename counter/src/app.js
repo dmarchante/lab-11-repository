@@ -24,7 +24,7 @@ class Counter extends React.Component {
   handleNumberDecrement = e => {
     e.preventDefault();
 
-    this.setState((prevState) => ({ counter: prevState.counter + 1}));
+    this.setState((prevState) => ({ counter: prevState.counter - 1}));
     this.handleClicks();
   }
 
